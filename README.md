@@ -6,6 +6,12 @@ A local Node CLI and bilingual English/Japanese browser workbench. Give it a fla
 
 **Coverage is only within the listed finite domains.** “Unobserved” never means globally unreachable. The output is a **snapshot starter**, not proof of translation correctness. The greedy reduction is deterministic, not guaranteed minimum. It covers branch arms, not every path, argument value or distinct rendered string.
 
+## Preview
+
+![Locale Cases desktop workbench](docs/screenshots/desktop-initial.png)
+
+[Japanese mobile branch ledger](docs/screenshots/mobile-390-japanese-coverage.png) · [Recorded CI and screenshot evidence](docs/VERIFICATION.md)
+
 ## Try it locally
 
 Requires Node 22 or 24 with full ICU. Installation/build fetch packages from npm; after that, catalog processing runs locally without network requests, uploads, telemetry or persistence.

@@ -9,11 +9,21 @@
 - CLI verifies source preservation, overwrite refusal, no artifacts on validation/work failure and flag rejection
 - Independent review found and verified fixes for malformed UTF-16 path encoding, domain planning outside the work budget/quadratic repetition, and branch-path metadata amplification before output limits
 
-## Browser and CI boundary
+## Browser and CI evidence
 
 The local environment restricts Chromium sandbox setup. No local browser launch or sandbox bypass was attempted. Thirteen browser scenarios are defined for a sandbox-capable machine, with `chromiumSandbox: true`, including real workers, cancel/edit invalidation, stale replies, errors/recovery, downloads, English/Japanese, mobile layouts, safe hostile text and skip-link focus.
 
-**Remote CI and screenshot inspection are pending publication.** A browser test definition is not a passing browser result. The parent publication step must record the exact remote commit/run and inspect artifact screenshots before marking browser verification complete.
+[Verification run 37136527691](https://github.com/Masanori-Spec/locale-cases/actions/runs/37136527691) passed on 2026-10-03 for code commit `90bafacd8fb21647745e3c88352835d9650e4e64`:
+
+- Node 22 and Node 24: all 69 tests, syntax, formatting, build and synthetic benchmark passed
+- Chromium 141.0.7390.37, Playwright 1.56.0, Ubuntu 22.04: all 13 browser scenarios passed with sandboxing enabled
+- The downloaded browser artifact SHA-256 was `aed1647d9bf6ac4329ad481ce1c388e9019a85a0709d7f3456485236f4870601`; all ten screenshots were visually inspected, including initial/focused-skip states, English/Japanese results, branch ledger, Japanese budget error, and 320/390px mobile cases/coverage
+- Text, controls, branch rows and exports remained readable without horizontal page overflow in these captured widths. This is a bounded visual check, not a full accessibility certification
+- The screenshots below are synthetic examples from that exact run. No user catalog was uploaded
+
+[Desktop initial view](screenshots/desktop-initial.png) · [390px Japanese branch ledger](screenshots/mobile-390-japanese-coverage.png)
+
+The code, tests and workflow are unchanged by this documentation/evidence update. The repository Actions page records verification of subsequent documentation commits.
 
 CI pins ubuntu-22.04 because Chromium sandboxing is usable there; its announced retirement is April 17, 2027. Recheck runner availability and migrate before that date. No `--no-sandbox`, AppArmor changes or security-policy relaxation is used.
 
