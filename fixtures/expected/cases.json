@@ -1,0 +1,595 @@
+{
+  "schemaVersion": 1,
+  "metadata": {
+    "tool": "Locale Cases",
+    "version": "0.1.0",
+    "dependencies": {
+      "parser": "3.5.20",
+      "intlMessageformat": "12.1.2"
+    },
+    "sourceSha256": "456e81e090d759ae2d4b6daffd880b48a0e5212016bc8e11639f38e857079241",
+    "configSha256": "a3bfb46026e7957264f85e77817d7aa03c3f5ab1d8ac933220f06395f8f370c8",
+    "runtime": {
+      "environment": "node",
+      "node": "24.19.0",
+      "v8": "13.6.233.17-node.51",
+      "icu": "78.3",
+      "cldr": "48.0",
+      "unicode": "17.0"
+    },
+    "coverageScope": "Only the listed finite domains. Unobserved does not mean globally unreachable.",
+    "reduction": "Deterministic greedy set cover; not guaranteed minimum. Covers branch arms, not every path or rendered string.",
+    "purpose": "Snapshot starter fixtures; generated expected text is not proof of translation correctness.",
+    "limits": {
+      "inputBytes": 1048576,
+      "messageBytes": 16384,
+      "messages": 200,
+      "locales": 8,
+      "depth": 32,
+      "astNodes": 2000,
+      "domainValues": 512,
+      "arguments": 32,
+      "vectorsPerMessage": 10000,
+      "vectorsPerRun": 100000,
+      "workUnits": 2000000,
+      "outputBytes": 8388608,
+      "valueBytes": 4096,
+      "renderBytes": 262144,
+      "idBytes": 1024
+    }
+  },
+  "cases": [
+    {
+      "id": "case-00001",
+      "messageId": "cart.items",
+      "locale": "ar",
+      "args": {
+        "n": 0
+      },
+      "text": "Your basket is empty",
+      "branches": [
+        "root/0:%3D0"
+      ]
+    },
+    {
+      "id": "case-00002",
+      "messageId": "cart.items",
+      "locale": "ar",
+      "args": {
+        "n": 1
+      },
+      "text": "One item is ready",
+      "branches": [
+        "root/0:one"
+      ]
+    },
+    {
+      "id": "case-00003",
+      "messageId": "cart.items",
+      "locale": "ar",
+      "args": {
+        "n": 2
+      },
+      "text": "2 items are ready",
+      "branches": [
+        "root/0:other"
+      ]
+    },
+    {
+      "id": "case-00004",
+      "messageId": "cart.items",
+      "locale": "en",
+      "args": {
+        "n": 0
+      },
+      "text": "Your basket is empty",
+      "branches": [
+        "root/0:%3D0"
+      ]
+    },
+    {
+      "id": "case-00005",
+      "messageId": "cart.items",
+      "locale": "en",
+      "args": {
+        "n": 1
+      },
+      "text": "One item is ready",
+      "branches": [
+        "root/0:one"
+      ]
+    },
+    {
+      "id": "case-00006",
+      "messageId": "cart.items",
+      "locale": "en",
+      "args": {
+        "n": 2
+      },
+      "text": "2 items are ready",
+      "branches": [
+        "root/0:other"
+      ]
+    },
+    {
+      "id": "case-00007",
+      "messageId": "cart.items",
+      "locale": "ja",
+      "args": {
+        "n": 0
+      },
+      "text": "Your basket is empty",
+      "branches": [
+        "root/0:%3D0"
+      ]
+    },
+    {
+      "id": "case-00008",
+      "messageId": "cart.items",
+      "locale": "ja",
+      "args": {
+        "n": 1
+      },
+      "text": "1 items are ready",
+      "branches": [
+        "root/0:other"
+      ]
+    },
+    {
+      "id": "case-00009",
+      "messageId": "cart.items",
+      "locale": "ru",
+      "args": {
+        "n": 0
+      },
+      "text": "Your basket is empty",
+      "branches": [
+        "root/0:%3D0"
+      ]
+    },
+    {
+      "id": "case-00010",
+      "messageId": "cart.items",
+      "locale": "ru",
+      "args": {
+        "n": 1
+      },
+      "text": "One item is ready",
+      "branches": [
+        "root/0:one"
+      ]
+    },
+    {
+      "id": "case-00011",
+      "messageId": "cart.items",
+      "locale": "ru",
+      "args": {
+        "n": 2
+      },
+      "text": "2 items are ready",
+      "branches": [
+        "root/0:other"
+      ]
+    },
+    {
+      "id": "case-00012",
+      "messageId": "event.guests",
+      "locale": "ar",
+      "args": {
+        "n": 0
+      },
+      "text": "No guests",
+      "branches": [
+        "root/0:%3D0"
+      ]
+    },
+    {
+      "id": "case-00013",
+      "messageId": "event.guests",
+      "locale": "ar",
+      "args": {
+        "n": 1
+      },
+      "text": "Only you",
+      "branches": [
+        "root/0:%3D1"
+      ]
+    },
+    {
+      "id": "case-00014",
+      "messageId": "event.guests",
+      "locale": "ar",
+      "args": {
+        "n": 2
+      },
+      "text": "You and 1 guest",
+      "branches": [
+        "root/0:one"
+      ]
+    },
+    {
+      "id": "case-00015",
+      "messageId": "event.guests",
+      "locale": "ar",
+      "args": {
+        "n": 3
+      },
+      "text": "You and 2 guests",
+      "branches": [
+        "root/0:other"
+      ]
+    },
+    {
+      "id": "case-00016",
+      "messageId": "event.guests",
+      "locale": "en",
+      "args": {
+        "n": 0
+      },
+      "text": "No guests",
+      "branches": [
+        "root/0:%3D0"
+      ]
+    },
+    {
+      "id": "case-00017",
+      "messageId": "event.guests",
+      "locale": "en",
+      "args": {
+        "n": 1
+      },
+      "text": "Only you",
+      "branches": [
+        "root/0:%3D1"
+      ]
+    },
+    {
+      "id": "case-00018",
+      "messageId": "event.guests",
+      "locale": "en",
+      "args": {
+        "n": 2
+      },
+      "text": "You and 1 guest",
+      "branches": [
+        "root/0:one"
+      ]
+    },
+    {
+      "id": "case-00019",
+      "messageId": "event.guests",
+      "locale": "en",
+      "args": {
+        "n": 3
+      },
+      "text": "You and 2 guests",
+      "branches": [
+        "root/0:other"
+      ]
+    },
+    {
+      "id": "case-00020",
+      "messageId": "event.guests",
+      "locale": "ja",
+      "args": {
+        "n": 0
+      },
+      "text": "No guests",
+      "branches": [
+        "root/0:%3D0"
+      ]
+    },
+    {
+      "id": "case-00021",
+      "messageId": "event.guests",
+      "locale": "ja",
+      "args": {
+        "n": 1
+      },
+      "text": "Only you",
+      "branches": [
+        "root/0:%3D1"
+      ]
+    },
+    {
+      "id": "case-00022",
+      "messageId": "event.guests",
+      "locale": "ja",
+      "args": {
+        "n": 2
+      },
+      "text": "You and 1 guests",
+      "branches": [
+        "root/0:other"
+      ]
+    },
+    {
+      "id": "case-00023",
+      "messageId": "event.guests",
+      "locale": "ru",
+      "args": {
+        "n": 0
+      },
+      "text": "No guests",
+      "branches": [
+        "root/0:%3D0"
+      ]
+    },
+    {
+      "id": "case-00024",
+      "messageId": "event.guests",
+      "locale": "ru",
+      "args": {
+        "n": 1
+      },
+      "text": "Only you",
+      "branches": [
+        "root/0:%3D1"
+      ]
+    },
+    {
+      "id": "case-00025",
+      "messageId": "event.guests",
+      "locale": "ru",
+      "args": {
+        "n": 2
+      },
+      "text": "You and 1 guest",
+      "branches": [
+        "root/0:one"
+      ]
+    },
+    {
+      "id": "case-00026",
+      "messageId": "event.guests",
+      "locale": "ru",
+      "args": {
+        "n": 3
+      },
+      "text": "You and 2 guests",
+      "branches": [
+        "root/0:other"
+      ]
+    },
+    {
+      "id": "case-00027",
+      "messageId": "race.place",
+      "locale": "ar",
+      "args": {
+        "position": 1
+      },
+      "text": "1th place",
+      "branches": [
+        "root/0:other"
+      ]
+    },
+    {
+      "id": "case-00028",
+      "messageId": "race.place",
+      "locale": "en",
+      "args": {
+        "position": 1
+      },
+      "text": "1st place",
+      "branches": [
+        "root/0:one"
+      ]
+    },
+    {
+      "id": "case-00029",
+      "messageId": "race.place",
+      "locale": "en",
+      "args": {
+        "position": 2
+      },
+      "text": "2nd place",
+      "branches": [
+        "root/0:two"
+      ]
+    },
+    {
+      "id": "case-00030",
+      "messageId": "race.place",
+      "locale": "en",
+      "args": {
+        "position": 3
+      },
+      "text": "3rd place",
+      "branches": [
+        "root/0:few"
+      ]
+    },
+    {
+      "id": "case-00031",
+      "messageId": "race.place",
+      "locale": "en",
+      "args": {
+        "position": 4
+      },
+      "text": "4th place",
+      "branches": [
+        "root/0:other"
+      ]
+    },
+    {
+      "id": "case-00032",
+      "messageId": "race.place",
+      "locale": "ja",
+      "args": {
+        "position": 1
+      },
+      "text": "1th place",
+      "branches": [
+        "root/0:other"
+      ]
+    },
+    {
+      "id": "case-00033",
+      "messageId": "race.place",
+      "locale": "ru",
+      "args": {
+        "position": 1
+      },
+      "text": "1th place",
+      "branches": [
+        "root/0:other"
+      ]
+    },
+    {
+      "id": "case-00034",
+      "messageId": "review.invite",
+      "locale": "ar",
+      "args": {
+        "role": "owner",
+        "name": "Aki"
+      },
+      "text": "Aki, invite your team",
+      "branches": [
+        "root/0:owner"
+      ]
+    },
+    {
+      "id": "case-00035",
+      "messageId": "review.invite",
+      "locale": "ar",
+      "args": {
+        "role": "viewer",
+        "name": "Aki"
+      },
+      "text": "Aki, request an invitation",
+      "branches": [
+        "root/0:viewer"
+      ]
+    },
+    {
+      "id": "case-00036",
+      "messageId": "review.invite",
+      "locale": "ar",
+      "args": {
+        "role": "guest",
+        "name": "Aki"
+      },
+      "text": "Aki, check your access",
+      "branches": [
+        "root/0:other"
+      ]
+    },
+    {
+      "id": "case-00037",
+      "messageId": "review.invite",
+      "locale": "en",
+      "args": {
+        "role": "owner",
+        "name": "Aki"
+      },
+      "text": "Aki, invite your team",
+      "branches": [
+        "root/0:owner"
+      ]
+    },
+    {
+      "id": "case-00038",
+      "messageId": "review.invite",
+      "locale": "en",
+      "args": {
+        "role": "viewer",
+        "name": "Aki"
+      },
+      "text": "Aki, request an invitation",
+      "branches": [
+        "root/0:viewer"
+      ]
+    },
+    {
+      "id": "case-00039",
+      "messageId": "review.invite",
+      "locale": "en",
+      "args": {
+        "role": "guest",
+        "name": "Aki"
+      },
+      "text": "Aki, check your access",
+      "branches": [
+        "root/0:other"
+      ]
+    },
+    {
+      "id": "case-00040",
+      "messageId": "review.invite",
+      "locale": "ja",
+      "args": {
+        "role": "owner",
+        "name": "Aki"
+      },
+      "text": "Aki, invite your team",
+      "branches": [
+        "root/0:owner"
+      ]
+    },
+    {
+      "id": "case-00041",
+      "messageId": "review.invite",
+      "locale": "ja",
+      "args": {
+        "role": "viewer",
+        "name": "Aki"
+      },
+      "text": "Aki, request an invitation",
+      "branches": [
+        "root/0:viewer"
+      ]
+    },
+    {
+      "id": "case-00042",
+      "messageId": "review.invite",
+      "locale": "ja",
+      "args": {
+        "role": "guest",
+        "name": "Aki"
+      },
+      "text": "Aki, check your access",
+      "branches": [
+        "root/0:other"
+      ]
+    },
+    {
+      "id": "case-00043",
+      "messageId": "review.invite",
+      "locale": "ru",
+      "args": {
+        "role": "owner",
+        "name": "Aki"
+      },
+      "text": "Aki, invite your team",
+      "branches": [
+        "root/0:owner"
+      ]
+    },
+    {
+      "id": "case-00044",
+      "messageId": "review.invite",
+      "locale": "ru",
+      "args": {
+        "role": "viewer",
+        "name": "Aki"
+      },
+      "text": "Aki, request an invitation",
+      "branches": [
+        "root/0:viewer"
+      ]
+    },
+    {
+      "id": "case-00045",
+      "messageId": "review.invite",
+      "locale": "ru",
+      "args": {
+        "role": "guest",
+        "name": "Aki"
+      },
+      "text": "Aki, check your access",
+      "branches": [
+        "root/0:other"
+      ]
+    }
+  ]
+}

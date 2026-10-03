@@ -1,0 +1,59 @@
+{
+  "note": "Synthetic local microbenchmarks, not an SLA or user-demand evidence. Includes cold first run; no browser/UI time. Runtime/machine differences matter.",
+  "platform": "linux",
+  "arch": "x64",
+  "results": [
+    {
+      "name": "50 messages × 4 locales, plural + select",
+      "runs": 5,
+      "medianMs": 57.22,
+      "minMs": 48.55,
+      "maxMs": 76.17,
+      "summary": {
+        "messages": 50,
+        "locales": 4,
+        "cases": 800,
+        "branches": 1800,
+        "observed": 1250,
+        "unobserved": 550,
+        "evaluatedVectors": 1950,
+        "workUnits": 25400
+      },
+      "outputBytes": 418068,
+      "runtime": {
+        "environment": "node",
+        "node": "24.19.0",
+        "v8": "13.6.233.17-node.51",
+        "icu": "78.3",
+        "cldr": "48.0",
+        "unicode": "17.0"
+      }
+    },
+    {
+      "name": "4,096 representative vectors in one message",
+      "runs": 5,
+      "medianMs": 11.19,
+      "minMs": 10.99,
+      "maxMs": 17.16,
+      "summary": {
+        "messages": 1,
+        "locales": 1,
+        "cases": 8,
+        "branches": 36,
+        "observed": 32,
+        "unobserved": 4,
+        "evaluatedVectors": 4096,
+        "workUnits": 94240
+      },
+      "outputBytes": 8567,
+      "runtime": {
+        "environment": "node",
+        "node": "24.19.0",
+        "v8": "13.6.233.17-node.51",
+        "icu": "78.3",
+        "cldr": "48.0",
+        "unicode": "17.0"
+      }
+    }
+  ]
+}

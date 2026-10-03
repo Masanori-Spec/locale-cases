@@ -1,0 +1,9 @@
+{
+  "locales": ["en", "ja", "ar", "ru"],
+  "domains": {
+    "n": [0, 1, 2, 3, 11, 100, 0.1],
+    "role": ["owner", "viewer", "guest"],
+    "position": [1, 2, 3, 4, 11, 12, 13, 21]
+  },
+  "samples": {"name": "Aki"}
+}

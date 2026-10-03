@@ -1,0 +1,6 @@
+{
+  "cart.items": "{n, plural, =0 {Your basket is empty} one {One item is ready} other {# items are ready}}",
+  "review.invite": "{role, select, owner {{name}, invite your team} viewer {{name}, request an invitation} other {{name}, check your access}}",
+  "event.guests": "{n, plural, offset:1 =0 {No guests} =1 {Only you} one {You and # guest} other {You and # guests}}",
+  "race.place": "{position, selectordinal, one {#st place} two {#nd place} few {#rd place} other {#th place}}"
+}

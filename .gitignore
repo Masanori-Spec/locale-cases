@@ -1,0 +1,8 @@
+node_modules/
+web/dist/
+browser-artifacts/
+benchmark-ci.json
+out/
+*.log
+.DS_Store
+test-results/

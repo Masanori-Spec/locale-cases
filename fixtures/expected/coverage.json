@@ -1,0 +1,1124 @@
+{
+  "schemaVersion": 1,
+  "metadata": {
+    "tool": "Locale Cases",
+    "version": "0.1.0",
+    "dependencies": {
+      "parser": "3.5.20",
+      "intlMessageformat": "12.1.2"
+    },
+    "sourceSha256": "456e81e090d759ae2d4b6daffd880b48a0e5212016bc8e11639f38e857079241",
+    "configSha256": "a3bfb46026e7957264f85e77817d7aa03c3f5ab1d8ac933220f06395f8f370c8",
+    "runtime": {
+      "environment": "node",
+      "node": "24.19.0",
+      "v8": "13.6.233.17-node.51",
+      "icu": "78.3",
+      "cldr": "48.0",
+      "unicode": "17.0"
+    },
+    "coverageScope": "Only the listed finite domains. Unobserved does not mean globally unreachable.",
+    "reduction": "Deterministic greedy set cover; not guaranteed minimum. Covers branch arms, not every path or rendered string.",
+    "purpose": "Snapshot starter fixtures; generated expected text is not proof of translation correctness.",
+    "limits": {
+      "inputBytes": 1048576,
+      "messageBytes": 16384,
+      "messages": 200,
+      "locales": 8,
+      "depth": 32,
+      "astNodes": 2000,
+      "domainValues": 512,
+      "arguments": 32,
+      "vectorsPerMessage": 10000,
+      "vectorsPerRun": 100000,
+      "workUnits": 2000000,
+      "outputBytes": 8388608,
+      "valueBytes": 4096,
+      "renderBytes": 262144,
+      "idBytes": 1024
+    }
+  },
+  "complete": true,
+  "summary": {
+    "messages": 4,
+    "locales": 4,
+    "cases": 45,
+    "branches": 56,
+    "observed": 45,
+    "unobserved": 11,
+    "evaluatedVectors": 49,
+    "workUnits": 427
+  },
+  "messages": [
+    {
+      "messageId": "cart.items",
+      "locale": "ar",
+      "resolvedLocale": "ar",
+      "domains": [
+        {
+          "argument": "n",
+          "type": "number",
+          "source": "explicit",
+          "values": [
+            0,
+            1,
+            2,
+            3,
+            11,
+            100,
+            0.1
+          ],
+          "representatives": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "totalVectors": 4,
+      "evaluatedVectors": 4,
+      "branches": [
+        {
+          "id": "root/0:%3D0",
+          "argument": "n",
+          "kind": "plural",
+          "option": "=0",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:one",
+          "argument": "n",
+          "kind": "plural",
+          "option": "one",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:other",
+          "argument": "n",
+          "kind": "plural",
+          "option": "other",
+          "path": "root/0",
+          "observed": true
+        }
+      ],
+      "coveredBranches": [
+        "root/0:%3D0",
+        "root/0:one",
+        "root/0:other"
+      ],
+      "unobservedBranches": []
+    },
+    {
+      "messageId": "cart.items",
+      "locale": "en",
+      "resolvedLocale": "en",
+      "domains": [
+        {
+          "argument": "n",
+          "type": "number",
+          "source": "explicit",
+          "values": [
+            0,
+            1,
+            2,
+            3,
+            11,
+            100,
+            0.1
+          ],
+          "representatives": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "totalVectors": 4,
+      "evaluatedVectors": 4,
+      "branches": [
+        {
+          "id": "root/0:%3D0",
+          "argument": "n",
+          "kind": "plural",
+          "option": "=0",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:one",
+          "argument": "n",
+          "kind": "plural",
+          "option": "one",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:other",
+          "argument": "n",
+          "kind": "plural",
+          "option": "other",
+          "path": "root/0",
+          "observed": true
+        }
+      ],
+      "coveredBranches": [
+        "root/0:%3D0",
+        "root/0:one",
+        "root/0:other"
+      ],
+      "unobservedBranches": []
+    },
+    {
+      "messageId": "cart.items",
+      "locale": "ja",
+      "resolvedLocale": "ja",
+      "domains": [
+        {
+          "argument": "n",
+          "type": "number",
+          "source": "explicit",
+          "values": [
+            0,
+            1,
+            2,
+            3,
+            11,
+            100,
+            0.1
+          ],
+          "representatives": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "totalVectors": 3,
+      "evaluatedVectors": 3,
+      "branches": [
+        {
+          "id": "root/0:%3D0",
+          "argument": "n",
+          "kind": "plural",
+          "option": "=0",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:one",
+          "argument": "n",
+          "kind": "plural",
+          "option": "one",
+          "path": "root/0",
+          "observed": false
+        },
+        {
+          "id": "root/0:other",
+          "argument": "n",
+          "kind": "plural",
+          "option": "other",
+          "path": "root/0",
+          "observed": true
+        }
+      ],
+      "coveredBranches": [
+        "root/0:%3D0",
+        "root/0:other"
+      ],
+      "unobservedBranches": [
+        "root/0:one"
+      ]
+    },
+    {
+      "messageId": "cart.items",
+      "locale": "ru",
+      "resolvedLocale": "ru",
+      "domains": [
+        {
+          "argument": "n",
+          "type": "number",
+          "source": "explicit",
+          "values": [
+            0,
+            1,
+            2,
+            3,
+            11,
+            100,
+            0.1
+          ],
+          "representatives": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "totalVectors": 4,
+      "evaluatedVectors": 4,
+      "branches": [
+        {
+          "id": "root/0:%3D0",
+          "argument": "n",
+          "kind": "plural",
+          "option": "=0",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:one",
+          "argument": "n",
+          "kind": "plural",
+          "option": "one",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:other",
+          "argument": "n",
+          "kind": "plural",
+          "option": "other",
+          "path": "root/0",
+          "observed": true
+        }
+      ],
+      "coveredBranches": [
+        "root/0:%3D0",
+        "root/0:one",
+        "root/0:other"
+      ],
+      "unobservedBranches": []
+    },
+    {
+      "messageId": "event.guests",
+      "locale": "ar",
+      "resolvedLocale": "ar",
+      "domains": [
+        {
+          "argument": "n",
+          "type": "number",
+          "source": "explicit",
+          "values": [
+            0,
+            1,
+            2,
+            3,
+            11,
+            100,
+            0.1
+          ],
+          "representatives": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "totalVectors": 4,
+      "evaluatedVectors": 4,
+      "branches": [
+        {
+          "id": "root/0:%3D0",
+          "argument": "n",
+          "kind": "plural",
+          "option": "=0",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:%3D1",
+          "argument": "n",
+          "kind": "plural",
+          "option": "=1",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:one",
+          "argument": "n",
+          "kind": "plural",
+          "option": "one",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:other",
+          "argument": "n",
+          "kind": "plural",
+          "option": "other",
+          "path": "root/0",
+          "observed": true
+        }
+      ],
+      "coveredBranches": [
+        "root/0:%3D0",
+        "root/0:%3D1",
+        "root/0:one",
+        "root/0:other"
+      ],
+      "unobservedBranches": []
+    },
+    {
+      "messageId": "event.guests",
+      "locale": "en",
+      "resolvedLocale": "en",
+      "domains": [
+        {
+          "argument": "n",
+          "type": "number",
+          "source": "explicit",
+          "values": [
+            0,
+            1,
+            2,
+            3,
+            11,
+            100,
+            0.1
+          ],
+          "representatives": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "totalVectors": 4,
+      "evaluatedVectors": 4,
+      "branches": [
+        {
+          "id": "root/0:%3D0",
+          "argument": "n",
+          "kind": "plural",
+          "option": "=0",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:%3D1",
+          "argument": "n",
+          "kind": "plural",
+          "option": "=1",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:one",
+          "argument": "n",
+          "kind": "plural",
+          "option": "one",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:other",
+          "argument": "n",
+          "kind": "plural",
+          "option": "other",
+          "path": "root/0",
+          "observed": true
+        }
+      ],
+      "coveredBranches": [
+        "root/0:%3D0",
+        "root/0:%3D1",
+        "root/0:one",
+        "root/0:other"
+      ],
+      "unobservedBranches": []
+    },
+    {
+      "messageId": "event.guests",
+      "locale": "ja",
+      "resolvedLocale": "ja",
+      "domains": [
+        {
+          "argument": "n",
+          "type": "number",
+          "source": "explicit",
+          "values": [
+            0,
+            1,
+            2,
+            3,
+            11,
+            100,
+            0.1
+          ],
+          "representatives": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "totalVectors": 3,
+      "evaluatedVectors": 3,
+      "branches": [
+        {
+          "id": "root/0:%3D0",
+          "argument": "n",
+          "kind": "plural",
+          "option": "=0",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:%3D1",
+          "argument": "n",
+          "kind": "plural",
+          "option": "=1",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:one",
+          "argument": "n",
+          "kind": "plural",
+          "option": "one",
+          "path": "root/0",
+          "observed": false
+        },
+        {
+          "id": "root/0:other",
+          "argument": "n",
+          "kind": "plural",
+          "option": "other",
+          "path": "root/0",
+          "observed": true
+        }
+      ],
+      "coveredBranches": [
+        "root/0:%3D0",
+        "root/0:%3D1",
+        "root/0:other"
+      ],
+      "unobservedBranches": [
+        "root/0:one"
+      ]
+    },
+    {
+      "messageId": "event.guests",
+      "locale": "ru",
+      "resolvedLocale": "ru",
+      "domains": [
+        {
+          "argument": "n",
+          "type": "number",
+          "source": "explicit",
+          "values": [
+            0,
+            1,
+            2,
+            3,
+            11,
+            100,
+            0.1
+          ],
+          "representatives": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "totalVectors": 4,
+      "evaluatedVectors": 4,
+      "branches": [
+        {
+          "id": "root/0:%3D0",
+          "argument": "n",
+          "kind": "plural",
+          "option": "=0",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:%3D1",
+          "argument": "n",
+          "kind": "plural",
+          "option": "=1",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:one",
+          "argument": "n",
+          "kind": "plural",
+          "option": "one",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:other",
+          "argument": "n",
+          "kind": "plural",
+          "option": "other",
+          "path": "root/0",
+          "observed": true
+        }
+      ],
+      "coveredBranches": [
+        "root/0:%3D0",
+        "root/0:%3D1",
+        "root/0:one",
+        "root/0:other"
+      ],
+      "unobservedBranches": []
+    },
+    {
+      "messageId": "race.place",
+      "locale": "ar",
+      "resolvedLocale": "ar",
+      "domains": [
+        {
+          "argument": "position",
+          "type": "number",
+          "source": "explicit",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            11,
+            12,
+            13,
+            21
+          ],
+          "representatives": [
+            1
+          ]
+        }
+      ],
+      "totalVectors": 1,
+      "evaluatedVectors": 1,
+      "branches": [
+        {
+          "id": "root/0:one",
+          "argument": "position",
+          "kind": "selectordinal",
+          "option": "one",
+          "path": "root/0",
+          "observed": false
+        },
+        {
+          "id": "root/0:two",
+          "argument": "position",
+          "kind": "selectordinal",
+          "option": "two",
+          "path": "root/0",
+          "observed": false
+        },
+        {
+          "id": "root/0:few",
+          "argument": "position",
+          "kind": "selectordinal",
+          "option": "few",
+          "path": "root/0",
+          "observed": false
+        },
+        {
+          "id": "root/0:other",
+          "argument": "position",
+          "kind": "selectordinal",
+          "option": "other",
+          "path": "root/0",
+          "observed": true
+        }
+      ],
+      "coveredBranches": [
+        "root/0:other"
+      ],
+      "unobservedBranches": [
+        "root/0:one",
+        "root/0:two",
+        "root/0:few"
+      ]
+    },
+    {
+      "messageId": "race.place",
+      "locale": "en",
+      "resolvedLocale": "en",
+      "domains": [
+        {
+          "argument": "position",
+          "type": "number",
+          "source": "explicit",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            11,
+            12,
+            13,
+            21
+          ],
+          "representatives": [
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "totalVectors": 4,
+      "evaluatedVectors": 4,
+      "branches": [
+        {
+          "id": "root/0:one",
+          "argument": "position",
+          "kind": "selectordinal",
+          "option": "one",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:two",
+          "argument": "position",
+          "kind": "selectordinal",
+          "option": "two",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:few",
+          "argument": "position",
+          "kind": "selectordinal",
+          "option": "few",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:other",
+          "argument": "position",
+          "kind": "selectordinal",
+          "option": "other",
+          "path": "root/0",
+          "observed": true
+        }
+      ],
+      "coveredBranches": [
+        "root/0:one",
+        "root/0:two",
+        "root/0:few",
+        "root/0:other"
+      ],
+      "unobservedBranches": []
+    },
+    {
+      "messageId": "race.place",
+      "locale": "ja",
+      "resolvedLocale": "ja",
+      "domains": [
+        {
+          "argument": "position",
+          "type": "number",
+          "source": "explicit",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            11,
+            12,
+            13,
+            21
+          ],
+          "representatives": [
+            1
+          ]
+        }
+      ],
+      "totalVectors": 1,
+      "evaluatedVectors": 1,
+      "branches": [
+        {
+          "id": "root/0:one",
+          "argument": "position",
+          "kind": "selectordinal",
+          "option": "one",
+          "path": "root/0",
+          "observed": false
+        },
+        {
+          "id": "root/0:two",
+          "argument": "position",
+          "kind": "selectordinal",
+          "option": "two",
+          "path": "root/0",
+          "observed": false
+        },
+        {
+          "id": "root/0:few",
+          "argument": "position",
+          "kind": "selectordinal",
+          "option": "few",
+          "path": "root/0",
+          "observed": false
+        },
+        {
+          "id": "root/0:other",
+          "argument": "position",
+          "kind": "selectordinal",
+          "option": "other",
+          "path": "root/0",
+          "observed": true
+        }
+      ],
+      "coveredBranches": [
+        "root/0:other"
+      ],
+      "unobservedBranches": [
+        "root/0:one",
+        "root/0:two",
+        "root/0:few"
+      ]
+    },
+    {
+      "messageId": "race.place",
+      "locale": "ru",
+      "resolvedLocale": "ru",
+      "domains": [
+        {
+          "argument": "position",
+          "type": "number",
+          "source": "explicit",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            11,
+            12,
+            13,
+            21
+          ],
+          "representatives": [
+            1
+          ]
+        }
+      ],
+      "totalVectors": 1,
+      "evaluatedVectors": 1,
+      "branches": [
+        {
+          "id": "root/0:one",
+          "argument": "position",
+          "kind": "selectordinal",
+          "option": "one",
+          "path": "root/0",
+          "observed": false
+        },
+        {
+          "id": "root/0:two",
+          "argument": "position",
+          "kind": "selectordinal",
+          "option": "two",
+          "path": "root/0",
+          "observed": false
+        },
+        {
+          "id": "root/0:few",
+          "argument": "position",
+          "kind": "selectordinal",
+          "option": "few",
+          "path": "root/0",
+          "observed": false
+        },
+        {
+          "id": "root/0:other",
+          "argument": "position",
+          "kind": "selectordinal",
+          "option": "other",
+          "path": "root/0",
+          "observed": true
+        }
+      ],
+      "coveredBranches": [
+        "root/0:other"
+      ],
+      "unobservedBranches": [
+        "root/0:one",
+        "root/0:two",
+        "root/0:few"
+      ]
+    },
+    {
+      "messageId": "review.invite",
+      "locale": "ar",
+      "resolvedLocale": "ar",
+      "domains": [
+        {
+          "argument": "name",
+          "type": "scalar",
+          "source": "sample",
+          "values": [
+            "Aki"
+          ],
+          "representatives": [
+            "Aki"
+          ]
+        },
+        {
+          "argument": "role",
+          "type": "string",
+          "source": "explicit",
+          "values": [
+            "owner",
+            "viewer",
+            "guest"
+          ],
+          "representatives": [
+            "owner",
+            "viewer",
+            "guest"
+          ]
+        }
+      ],
+      "totalVectors": 3,
+      "evaluatedVectors": 3,
+      "branches": [
+        {
+          "id": "root/0:owner",
+          "argument": "role",
+          "kind": "select",
+          "option": "owner",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:viewer",
+          "argument": "role",
+          "kind": "select",
+          "option": "viewer",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:other",
+          "argument": "role",
+          "kind": "select",
+          "option": "other",
+          "path": "root/0",
+          "observed": true
+        }
+      ],
+      "coveredBranches": [
+        "root/0:owner",
+        "root/0:viewer",
+        "root/0:other"
+      ],
+      "unobservedBranches": []
+    },
+    {
+      "messageId": "review.invite",
+      "locale": "en",
+      "resolvedLocale": "en",
+      "domains": [
+        {
+          "argument": "name",
+          "type": "scalar",
+          "source": "sample",
+          "values": [
+            "Aki"
+          ],
+          "representatives": [
+            "Aki"
+          ]
+        },
+        {
+          "argument": "role",
+          "type": "string",
+          "source": "explicit",
+          "values": [
+            "owner",
+            "viewer",
+            "guest"
+          ],
+          "representatives": [
+            "owner",
+            "viewer",
+            "guest"
+          ]
+        }
+      ],
+      "totalVectors": 3,
+      "evaluatedVectors": 3,
+      "branches": [
+        {
+          "id": "root/0:owner",
+          "argument": "role",
+          "kind": "select",
+          "option": "owner",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:viewer",
+          "argument": "role",
+          "kind": "select",
+          "option": "viewer",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:other",
+          "argument": "role",
+          "kind": "select",
+          "option": "other",
+          "path": "root/0",
+          "observed": true
+        }
+      ],
+      "coveredBranches": [
+        "root/0:owner",
+        "root/0:viewer",
+        "root/0:other"
+      ],
+      "unobservedBranches": []
+    },
+    {
+      "messageId": "review.invite",
+      "locale": "ja",
+      "resolvedLocale": "ja",
+      "domains": [
+        {
+          "argument": "name",
+          "type": "scalar",
+          "source": "sample",
+          "values": [
+            "Aki"
+          ],
+          "representatives": [
+            "Aki"
+          ]
+        },
+        {
+          "argument": "role",
+          "type": "string",
+          "source": "explicit",
+          "values": [
+            "owner",
+            "viewer",
+            "guest"
+          ],
+          "representatives": [
+            "owner",
+            "viewer",
+            "guest"
+          ]
+        }
+      ],
+      "totalVectors": 3,
+      "evaluatedVectors": 3,
+      "branches": [
+        {
+          "id": "root/0:owner",
+          "argument": "role",
+          "kind": "select",
+          "option": "owner",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:viewer",
+          "argument": "role",
+          "kind": "select",
+          "option": "viewer",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:other",
+          "argument": "role",
+          "kind": "select",
+          "option": "other",
+          "path": "root/0",
+          "observed": true
+        }
+      ],
+      "coveredBranches": [
+        "root/0:owner",
+        "root/0:viewer",
+        "root/0:other"
+      ],
+      "unobservedBranches": []
+    },
+    {
+      "messageId": "review.invite",
+      "locale": "ru",
+      "resolvedLocale": "ru",
+      "domains": [
+        {
+          "argument": "name",
+          "type": "scalar",
+          "source": "sample",
+          "values": [
+            "Aki"
+          ],
+          "representatives": [
+            "Aki"
+          ]
+        },
+        {
+          "argument": "role",
+          "type": "string",
+          "source": "explicit",
+          "values": [
+            "owner",
+            "viewer",
+            "guest"
+          ],
+          "representatives": [
+            "owner",
+            "viewer",
+            "guest"
+          ]
+        }
+      ],
+      "totalVectors": 3,
+      "evaluatedVectors": 3,
+      "branches": [
+        {
+          "id": "root/0:owner",
+          "argument": "role",
+          "kind": "select",
+          "option": "owner",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:viewer",
+          "argument": "role",
+          "kind": "select",
+          "option": "viewer",
+          "path": "root/0",
+          "observed": true
+        },
+        {
+          "id": "root/0:other",
+          "argument": "role",
+          "kind": "select",
+          "option": "other",
+          "path": "root/0",
+          "observed": true
+        }
+      ],
+      "coveredBranches": [
+        "root/0:owner",
+        "root/0:viewer",
+        "root/0:other"
+      ],
+      "unobservedBranches": []
+    }
+  ]
+}

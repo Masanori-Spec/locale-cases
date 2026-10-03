@@ -1,0 +1,28 @@
+{
+  "name": "locale-cases",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Finite-domain ICU MessageFormat snapshot starter fixtures, locally",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "test:browser": "node test/browser.cjs",
+    "benchmark": "node scripts/benchmark.mjs",
+    "serve": "node scripts/serve.mjs",
+    "check:syntax": "node scripts/check-syntax.mjs",
+    "format:check": "prettier --check src scripts test web/*.js web/*.css web/*.html"
+  },
+  "dependencies": {
+    "@formatjs/icu-messageformat-parser": "3.5.20",
+    "intl-messageformat": "12.1.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.0",
+    "esbuild": "0.25.12",
+    "prettier": "3.6.2"
+  }
+}

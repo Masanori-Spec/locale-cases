@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A local-first ICU MessageFormat branch fixture workbench. Inspect finite-domain coverage and export JSON snapshot starters."
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; worker-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; font-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <title>Locale Cases · ICU fixture workbench</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#workspace" data-i18n="skip">Skip to editors</a>
+    <div class="shell">
+      <header class="masthead">
+        <a class="brand" href="#" aria-label="Locale Cases"
+          ><span class="brand-mark" aria-hidden="true">{↳}</span
+          ><span
+            >Locale Cases<span class="brand-sub" data-i18n="brandSub"
+              >ICU fixture workbench</span
+            ></span
+          ></a
+        >
+        <div class="header-tools">
+          <span class="local-pill"
+            ><i aria-hidden="true"></i
+            ><span data-i18n="localOnly">Runs in this browser</span></span
+          >
+          <div
+            class="language-switch"
+            role="group"
+            aria-label="Interface language"
+          >
+            <button id="lang-en" type="button" lang="en" aria-pressed="true">
+              EN</button
+            ><button id="lang-ja" type="button" lang="ja" aria-pressed="false">
+              日本語
+            </button>
+          </div>
+        </div>
+      </header>
+      <section class="intro" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow" data-i18n="eyebrow">FROM MESSAGE TO TEST CASE</p>
+          <h1 id="page-title" data-i18n="title">Make the branches visible.</h1>
+          <p class="lede" data-i18n="lede">
+            Turn ICU messages into concrete arguments, rendered text, and branch
+            evidence. A small starting point for your next snapshot test.
+          </p>
+        </div>
+        <aside class="scope-note">
+          <span class="scope-symbol" aria-hidden="true">{ # }</span
+          ><strong data-i18n="scopeTitle">A bounded experiment</strong>
+          <p data-i18n="scopeNote">
+            Coverage is only for the configured finite inputs. It does not prove
+            linguistic correctness or find a minimum fixture set.
+          </p>
+        </aside>
+      </section>
+      <main id="workspace" tabindex="-1">
+        <section class="input-panel" aria-labelledby="inputs-title">
+          <div class="section-heading">
+            <div>
+              <span class="step">01</span>
+              <h2 id="inputs-title" data-i18n="inputsTitle">
+                Define the experiment
+              </h2>
+            </div>
+            <button
+              id="sample-button"
+              class="quiet-button"
+              type="button"
+              data-i18n="sampleButton"
+            >
+              Load example ↺
+            </button>
+          </div>
+          <div class="editors">
+            <div class="editor-card">
+              <div class="editor-heading">
+                <label for="catalog-input" data-i18n="catalogLabel"
+                  >Message catalog</label
+                ><span>catalog.json</span>
+              </div>
+              <p class="editor-hint" id="catalog-hint" data-i18n="catalogHint">
+                A flat JSON object: message ID → ICU message string.
+              </p>
+              <textarea
+                id="catalog-input"
+                aria-describedby="catalog-hint"
+                spellcheck="false"
+                autocapitalize="off"
+                autocomplete="off"
+                wrap="soft"
+              ></textarea>
+              <div class="editor-footer">
+                <label
+                  class="file-label"
+                  for="catalog-file"
+                  data-i18n="openJson"
+                  >Open JSON file</label
+                ><input
+                  id="catalog-file"
+                  type="file"
+                  accept=".json,application/json"
+                  aria-label="Open catalog JSON file"
+                /><span data-i18n="fileLimit">up to 1 MiB</span>
+              </div>
+            </div>
+            <div class="editor-card">
+              <div class="editor-heading">
+                <label for="config-input" data-i18n="configLabel"
+                  >Locales & inputs</label
+                ><span>config.json</span>
+              </div>
+              <p class="editor-hint" id="config-hint" data-i18n="configHint">
+                Choose locales, finite argument domains, and sample values.
+              </p>
+              <textarea
+                id="config-input"
+                aria-describedby="config-hint"
+                spellcheck="false"
+                autocapitalize="off"
+                autocomplete="off"
+                wrap="soft"
+              ></textarea>
+              <div class="editor-footer">
+                <label class="file-label" for="config-file" data-i18n="openJson"
+                  >Open JSON file</label
+                ><input
+                  id="config-file"
+                  type="file"
+                  accept=".json,application/json"
+                  aria-label="Open configuration JSON file"
+                /><span data-i18n="fileLimit">up to 1 MiB</span>
+              </div>
+            </div>
+          </div>
+          <div class="run-bar">
+            <div class="run-actions">
+              <button id="generate-button" type="button" class="primary-button">
+                <span data-i18n="generate">Generate cases</span
+                ><span aria-hidden="true">↗</span></button
+              ><button
+                id="cancel-button"
+                type="button"
+                class="quiet-button"
+                hidden
+                data-i18n="cancel"
+              >
+                Cancel
+              </button>
+            </div>
+            <p id="status-text" role="status" aria-live="polite"></p>
+          </div>
+          <div id="error-region" class="error-region" role="alert" hidden>
+            <strong id="error-title"></strong>
+            <p id="error-message"></p>
+            <p id="error-help"></p>
+          </div>
+        </section>
+        <section
+          id="empty-state"
+          class="empty-state"
+          aria-labelledby="empty-title"
+        >
+          <div class="empty-lines" aria-hidden="true">
+            <span>message → arguments</span><span>arguments → branches</span
+            ><span>branches → evidence</span>
+          </div>
+          <div>
+            <p class="eyebrow" data-i18n="nextStep">
+              NEXT, INSPECT THE WITNESSES
+            </p>
+            <h2 id="empty-title" data-i18n="emptyTitle">
+              Your cases will appear here.
+            </h2>
+            <p data-i18n="emptyNote">
+              The example explores cardinal plurals, ordinals, nested selects,
+              and a plural offset across four locales.
+            </p>
+          </div>
+        </section>
+        <section
+          id="results"
+          class="result-panel"
+          aria-labelledby="results-title"
+          hidden
+        >
+          <div class="section-heading">
+            <div>
+              <span class="step">02</span>
+              <h2 id="results-title" data-i18n="resultsTitle">
+                Inspect the evidence
+              </h2>
+            </div>
+            <span class="result-tag" data-i18n="resultTag"
+              >Finite-domain run complete</span
+            >
+          </div>
+          <div id="metrics" class="metrics"></div>
+          <p class="result-caveat" data-i18n="resultCaveat">
+            “Observed” means a branch was selected for at least one supplied
+            input. “Unobserved” is not a proof that a branch is unreachable.
+          </p>
+          <div class="results-toolbar">
+            <div class="result-tabs" role="group" aria-label="Result view">
+              <button
+                id="cases-tab"
+                type="button"
+                aria-pressed="true"
+                data-i18n="casesTab"
+              >
+                Rendered cases</button
+              ><button
+                id="coverage-tab"
+                type="button"
+                aria-pressed="false"
+                data-i18n="coverageTab"
+              >
+                Branch ledger
+              </button>
+            </div>
+            <div class="downloads">
+              <button
+                id="download-cases"
+                type="button"
+                class="download-button"
+                disabled
+              >
+                ↓ cases.json</button
+              ><button
+                id="download-coverage"
+                type="button"
+                class="download-button"
+                disabled
+              >
+                ↓ coverage.json
+              </button>
+            </div>
+          </div>
+          <div class="filters">
+            <div>
+              <label for="locale-filter" data-i18n="localeFilter">Locale</label
+              ><select id="locale-filter"></select>
+            </div>
+            <div class="search-filter">
+              <label for="message-filter" data-i18n="messageFilter"
+                >Message ID contains</label
+              ><input
+                id="message-filter"
+                type="search"
+                autocomplete="off"
+                spellcheck="false"
+              />
+            </div>
+          </div>
+          <p id="result-count" class="result-count" role="status"></p>
+          <div id="result-list"></div>
+          <nav class="pagination" aria-label="Result pages">
+            <button
+              id="previous-page"
+              type="button"
+              class="quiet-button"
+              data-i18n="previous"
+            >
+              ← Previous</button
+            ><span id="page-label"></span
+            ><button
+              id="next-page"
+              type="button"
+              class="quiet-button"
+              data-i18n="next"
+            >
+              Next →
+            </button>
+          </nav>
+          <details class="runtime-details">
+            <summary data-i18n="runtimeTitle">Runtime & provenance</summary>
+            <p data-i18n="runtimeNote">
+              This browser’s ICU version is not exposed. Plural and number
+              behavior can differ between engines or versions. Review snapshots
+              in the runtime used by your tests.
+            </p>
+            <pre id="runtime-metadata" dir="ltr"></pre>
+          </details>
+        </section>
+        <details class="guide">
+          <summary data-i18n="guideTitle">
+            What goes into the configuration?
+          </summary>
+          <div class="guide-grid">
+            <div>
+              <h3 data-i18n="guideDomainsTitle">Finite domains</h3>
+              <p data-i18n="guideDomains">
+                Use domains for arguments you want to explore: for example, n:
+                [0, 1, 2, 11, 0.1]. Coverage applies only to these values and
+                any representatives listed in the report.
+              </p>
+            </div>
+            <div>
+              <h3 data-i18n="guideSamplesTitle">Sample values</h3>
+              <p data-i18n="guideSamples">
+                Use samples for plain interpolations such as name. The same
+                catalog is rendered for every requested locale; messages are not
+                translated.
+              </p>
+            </div>
+            <div>
+              <h3 data-i18n="guideLimitsTitle">Explicit limits</h3>
+              <p data-i18n="guideLimits">
+                The engine bounds input, vectors, and output. A limit failure
+                discards the whole run. Reduce a domain, split the catalog, or
+                remove a stricter limits override.
+              </p>
+            </div>
+          </div>
+        </details>
+      </main>
+      <footer>
+        <span data-i18n="footerLocal"
+          >No uploads. No account. No saved input.</span
+        ><span data-i18n="footerReview"
+          >Snapshot starters. Human review required.</span
+        >
+      </footer>
+    </div>
+  </body>
+</html>
